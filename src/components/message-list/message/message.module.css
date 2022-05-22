@@ -1,0 +1,22 @@
+.message {
+  border-radius: 10px;
+  background: linear-gradient(#141e30, #243b55);
+  padding: 5px;
+  width: 40%;
+  margin: auto 0 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.title{
+  color: rgb(124, 96, 249);
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+p{
+  color: rgb(124, 96, 249); 
+  margin:2px;
+}

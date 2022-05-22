@@ -1,0 +1,16 @@
+.listItem {
+  margin: 5px;
+  display: flex;
+  /* justify-content: space-between; */
+  padding:7px;
+  border-radius: 10px;
+  background-color: rgba(1, 15, 104, 0.771);
+  align-items: center;
+}
+.about{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left: 15px;
+  gap: 220px;
+}
