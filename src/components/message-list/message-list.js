@@ -68,27 +68,34 @@ export function MessageList() {
   }, [msgList]);
 
   return (
-    <div className={styles.msgList}>
-      {msgList.map((message) => (
-        <Message msg={message} key={message.msgID} />
-      ))}
+    <div className={styles.msgBlock}>
+      <ul className={styles.msgList}>
+        {msgList.map((message) => (
+          <Message msg={message} key={message.msgID} />
+        ))}
+      </ul>
       <TextField
         InputProps={{
           autoFocus: true,
           value: msgValue,
           onChange: getMsgValue,
           onKeyDown: handlePressInput,
+          color: "secondary",
           endAdornment: (
             <InputAdornment position="end">
-              {msgValue && <SendIcon color={"primary"} onClick={getMsgList} />}
+              {msgValue && (
+                <SendIcon color={"secondary"} onClick={getMsgList} />
+              )}
             </InputAdornment>
           ),
         }}
+        className={styles.msgInput}
         fullWidth={true}
         size={"small"}
         id="standard-basic"
         label="type ur message..."
         variant="standard"
+        color={"secondary"}
       />
     </div>
   );

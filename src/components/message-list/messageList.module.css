@@ -1,8 +1,30 @@
-.msgList{
-  height:100%;
-  width: 100%;
+.msgBlock{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(4, 159, 25);
+  height: 100%;
+  overflow: hidden;
+}
+
+.msgList {
+  overflow-Y: scroll;
+  background-color:#f3d2c1; 
+}
+.msgList::-webkit-scrollbar {
+  width: 10px;
+}
+
+.msgList::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.msgList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.msgInput{
+  background-color:#f3d2c1; 
 }
