@@ -1,22 +1,24 @@
 /* eslint-disable jsx-a11y/heading-has-content */
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { Message } from './components/test/message';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { MessageList, Header, ChatList } from "./components";
+import "./global.css";
+import { ThemeProvider, createTheme } from "@mui/material";
+import { Foo } from "./components/projectGB/reactHooks";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const theme = createTheme({});
+
 root.render(
   <React.StrictMode>
-    <Message props1={1}
-          props2="Stas" 
-          props3={(ar)=>console.log(`hellow Stas from react-props/| ${ar}`)}
-          props4={[1,2,3,4]}
-          films={[
-            {title: 'film1', year: 2022},
-            {title: 'film2', year: 1984},
-          ]}
-          />
+    <ThemeProvider theme={theme}>
+      <Header />
+      <div className="main">
+        <ChatList />
+        <MessageList />
+      </div>
+    </ThemeProvider>
+    {/* <Foo /> */}
   </React.StrictMode>
 );
-
-
